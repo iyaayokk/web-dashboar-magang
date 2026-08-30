@@ -26,7 +26,7 @@ class DashboardController extends Controller
             // Query Base dengan Filter
             $queryBase = Order::query();
 
-            if ($selectedYear) {
+            if ($selectedYear && $selectedYear !== 'all') {
                 $queryBase->where(function($q) use ($selectedYear) {
                     $q->whereYear('tanggal_pengajuan', $selectedYear)
                       ->orWhere('tahun', $selectedYear);

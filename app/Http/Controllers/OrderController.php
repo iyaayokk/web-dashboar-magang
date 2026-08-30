@@ -41,7 +41,7 @@ class OrderController extends Controller
         }
 
         // 4. Filter Berdasarkan Tahun
-        if ($year) {
+        if ($year && $year !== 'all') {
             $query->where(function($q) use ($year) {
                 $q->whereYear('tanggal_pengajuan', $year)
                   ->orWhere('tahun', $year);

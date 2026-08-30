@@ -42,7 +42,7 @@
                 <!-- Filter Tahun -->
                 <div class="col-md-2">
                     <select name="year" class="form-select form-select-sm">
-                        <option value="">-- Semua Tahun --</option>
+                        <option value="all" {{ $year == 'all' || !$year ? 'selected' : '' }}>-- Semua Tahun --</option>
                         @foreach($availableYears as $yr)
                             <option value="{{ $yr }}" {{ $year == $yr ? 'selected' : '' }}>Tahun {{ $yr }}</option>
                         @endforeach

@@ -33,6 +33,17 @@
         .card-kpi { border-left: 4px solid var(--pln-blue); transition: transform 0.2s; }
         .card-kpi:hover { transform: translateY(-3px); }
         .badge-status { font-size: 0.75rem; padding: 5px 10px; border-radius: 6px; }
+        .nav-status-badge {
+            font-size: 0.78rem;
+            background: rgba(25, 135, 84, 0.2);
+            color: #2eca8b;
+            border: 1px solid rgba(46, 202, 139, 0.4);
+            padding: 5px 12px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            font-weight: 500;
+        }
     </style>
 </head>
 <body>
@@ -67,7 +78,7 @@
             </ul>
 
             <div class="d-flex align-items-center gap-3 text-white">
-                <span class="badge bg-success bg-opacity-20 text-success border border-success px-3 py-2">
+                <span class="nav-status-badge">
                     <i class="bi bi-database-check me-1"></i> Enterprise DB Connected
                 </span>
                 <div class="vr bg-white opacity-25 d-none d-md-block" style="height:25px;"></div>
